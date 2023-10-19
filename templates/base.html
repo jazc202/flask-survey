@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Surveys</title>
+    </head>
+    <body>
+        <!-- {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+            {{ get_flashed_messages() }}
+            {% endfor %}
+            </ul>
+        {% endif %}
+        {% endwith %} -->
+        {% if get_flashed_messages() %}
+            {{ get_flashed_messages()[0] }}
+        {% endif %}
+
+        {% block content %}{% endblock %}
+    </body>
+</html>
