@@ -5,6 +5,10 @@
     {% for c in answers %}
     <input type="radio" value="{{ c }}" name="choices">{{ c }}
     {% endfor %}
+    {% if allow_txt == True %}
+    <br>
+    <textarea id="resp" name="comment"></textarea>
+    {% endif %}
 
     <input type="submit" value="Submit">
 </form>

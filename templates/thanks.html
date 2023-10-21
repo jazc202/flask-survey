@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 <p>Thank you!</p>
-<p>{{ answers }}</p>
+<p>
+    {% for a in answers %}
+    <b>{{ a['question'] }}:</b> {{ a['choice'] }} 
+    
+    {% if a['comment'] %}
+    <i>{{ a['comment'] }}</i>
+    {% endif %}<br>
+    {% endfor %}
+</p>
 {% endblock %}
